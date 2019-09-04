@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/liuxin/AndroidStudioProjects/AudioPlay/app/.externalNativeBuild/cmake/release/arm64-v8a",
+  "command": "/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c /home/liuxin/AndroidStudioProjects/AudioPlay/app/src/main/cpp/native-lib.cpp",
+  "file": "/home/liuxin/AndroidStudioProjects/AudioPlay/app/src/main/cpp/native-lib.cpp"
+}
+]

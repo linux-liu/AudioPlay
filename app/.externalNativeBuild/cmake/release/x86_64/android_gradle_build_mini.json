@@ -1,0 +1,18 @@
+{
+  "buildFiles": [
+    "/home/liuxin/Android/Sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/home/liuxin/Android/Sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/home/liuxin/AndroidStudioProjects/AudioPlay/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/home/liuxin/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build \"/home/liuxin/AndroidStudioProjects/AudioPlay/app/.externalNativeBuild/cmake/release/x86_64\" --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-x86_64": {
+      "artifactName": "native-lib",
+      "buildCommand": "/home/liuxin/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build \"/home/liuxin/AndroidStudioProjects/AudioPlay/app/.externalNativeBuild/cmake/release/x86_64\" --target native-lib",
+      "abi": "x86_64",
+      "output": "/home/liuxin/AndroidStudioProjects/AudioPlay/app/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# ninja log v5
+0	705	1566478482	CMakeFiles/native-lib.dir/native-lib.cpp.o	ae591f5c0eca25aa
+705	821	1566478482	/home/liuxin/AndroidStudioProjects/AudioPlay/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	4b21ef9e1461d2fd
