@@ -1,1 +1,1 @@
-# AudioPlay
+# 基于ffmpeg开发的万能音频播放器
