@@ -12,6 +12,20 @@ add_library(native-lib
             src/main/cpp/Audio.cpp
             src/main/cpp/AvPacketQuene.cpp
             src/main/cpp/PlayStatus.cpp
+            src/main/cpp/soundtouch/AAFilter.cpp
+            src/main/cpp/soundtouch/FIRFilter.cpp
+            src/main/cpp/soundtouch/BPMDetect.cpp
+            src/main/cpp/soundtouch/PeakFinder.cpp
+            src/main/cpp/soundtouch/cpu_detect_x86.cpp
+            src/main/cpp/soundtouch/FIFOSampleBuffer.cpp
+            src/main/cpp/soundtouch/InterpolateCubic.cpp
+            src/main/cpp/soundtouch/InterpolateLinear.cpp
+            src/main/cpp/soundtouch/InterpolateShannon.cpp
+            src/main/cpp/soundtouch/mmx_optimized.cpp
+            src/main/cpp/soundtouch/RateTransposer.cpp
+            src/main/cpp/soundtouch/SoundTouch.cpp
+            src/main/cpp/soundtouch/sse_optimized.cpp
+            src/main/cpp/soundtouch/TDStretch.cpp
            )
 
 set(JNI_LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs)
@@ -68,6 +82,8 @@ set_target_properties(avdevice
                       ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavdevice.so )
 
 include_directories(${JNI_LIBS_DIR}/includes)
+
+include_directories(${JNI_LIBS_DIR}/includes/soundtouch)
 
 target_link_libraries(native-lib
                       OpenSLES

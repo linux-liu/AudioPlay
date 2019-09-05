@@ -61,7 +61,7 @@ Java_com_liuxin_audiolib_LXPlayer_prepare(JNIEnv *env, jobject instance, jstring
         if (globelobject == NULL) {
             globelobject = env->NewGlobalRef(instance);
         }
-        if(IS_DEBUG){
+        if (IS_DEBUG) {
             ALOGD("开始初始化....");
         }
         if (callJava == NULL) {
@@ -75,7 +75,6 @@ Java_com_liuxin_audiolib_LXPlayer_prepare(JNIEnv *env, jobject instance, jstring
         lxfFmpeg->prepare();
         env->ReleaseStringUTFChars(url, _url);
     }
-
 
 
 }extern "C"
@@ -136,7 +135,7 @@ static void *releaseCallBack(void *data) {
     jmethodID jcallswitchmd = jniEnv->GetMethodID(jcls, "JniCallSwitch", "()V");
     jniEnv->CallVoidMethod(globelobject, jcallswitchmd);
     jvm->DetachCurrentThread();
-    if(IS_DEBUG){
+    if (IS_DEBUG) {
         ALOGD("完全释放了内存");
     }
 
@@ -176,5 +175,41 @@ Java_com_liuxin_audiolib_LXPlayer_seek(JNIEnv *env, jobject thiz, jint sec) {
     seekSec = sec;
     pthread_create(&seekThread, NULL, seekCallBack, NULL);
 
+
+}extern "C"
+JNIEXPORT jint JNICALL
+Java_com_liuxin_audiolib_LXPlayer_getDuration(JNIEnv *env, jobject instance) {
+    if (lxfFmpeg != NULL) {
+        return lxfFmpeg->getDuration();
+    }
+    return 0;
+
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_liuxin_audiolib_LXPlayer_setVolume(JNIEnv *env, jobject instance, jint volume) {
+
+    if (lxfFmpeg != NULL) {
+        lxfFmpeg->setVolume(volume);
+    }
+
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_liuxin_audiolib_LXPlayer_setMute(JNIEnv *env, jobject instance, jboolean mute) {
+
+    if (lxfFmpeg != NULL) {
+        lxfFmpeg->setMute(mute);
+    }
+
+}extern "C"
+JNIEXPORT void JNICALL
+Java_com_liuxin_audiolib_LXPlayer_setChannelSolo(JNIEnv *env, jobject instance, jint channel) {
+
+    if (lxfFmpeg != NULL) {
+        lxfFmpeg->setChannelSolo(channel);
+    }
 
 }

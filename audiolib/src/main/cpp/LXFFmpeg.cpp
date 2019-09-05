@@ -48,7 +48,7 @@ static int interrupt_call_back(void *data) {
 void LXFFmpeg::realPrepare() {
 
     pthread_mutex_lock(&pthreadMutex);
-    callJava->onPlayStatus(ChildThread,0);
+    callJava->onPlayStatus(ChildThread, 0);
     av_register_all();
     avformat_network_init();
     if (this->audio == NULL) {
@@ -106,7 +106,9 @@ void LXFFmpeg::realPrepare() {
 
 
     this->audio->duration = (int64_t) (formatContext->duration / AV_TIME_BASE);
-
+    if (callJava != NULL) {
+        callJava->onProgress(ChildThread, (int) this->audio->duration, 0);
+    }
     if ((ret = avcodec_parameters_to_context(codecContext,
                                              formatContext->streams[audio->audioStreamIndex]->codecpar)) <
         0) {
@@ -157,7 +159,7 @@ static void *startCallBack(void *data) {
 
 
 void LXFFmpeg::start() {
-    if (audio == NULL||playStatus==NULL||playStatus->isExit) {
+    if (audio == NULL || playStatus == NULL || playStatus->isExit) {
         if (IS_DEBUG) {
             ALOGE("请先调用prepare方法准备音频流");
         }
@@ -274,14 +276,14 @@ void LXFFmpeg::release() {
         delete audio;
         audio = NULL;
     }
-     if(callJava!=NULL){
-             callJava->onProgress(ChildThread,0,0);
-         }
+    if (callJava != NULL) {
+        callJava->onProgress(ChildThread, 0, 0);
+    }
     callJava = NULL;
     playStatus = NULL;
 
     if (avPacketQuene) {
-        delete  avPacketQuene;
+        delete avPacketQuene;
         avPacketQuene = NULL;
     }
 
@@ -340,6 +342,36 @@ void LXFFmpeg::seek(int sec) {
 
 
 }
+
+int LXFFmpeg::getDuration() {
+    if (audio != NULL) {
+        return (int) audio->duration;
+    }
+    return 0;
+}
+
+void LXFFmpeg::setVolume(int volume) {
+    if (volume < 0) volume = 0;
+    if (volume > 100) volume = 100;
+    if (audio != NULL) {
+        audio->setVolume(volume);
+    }
+}
+
+void LXFFmpeg::setMute(bool mute) {
+    if (audio != NULL) {
+        audio->setMute(mute);
+    }
+
+}
+
+void LXFFmpeg::setChannelSolo(int channel) {
+    if (audio != NULL) {
+        audio->setChannelSolo(channel);
+    }
+}
+
+
 
 
 

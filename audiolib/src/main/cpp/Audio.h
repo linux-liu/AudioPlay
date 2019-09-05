@@ -55,6 +55,8 @@ public:
     //播放和播放参数
     SLObjectItf  playerObject=NULL;
     SLPlayItf    slPlayItf=NULL;
+    SLVolumeItf  slVolumeItf=NULL;
+    SLMuteSoloItf slMuteSoloItf=NULL;
 
     pthread_mutex_t sl_mutex;
 
@@ -73,6 +75,13 @@ public:
     void stop();
 
     void release();
+
+    void setVolume(int volume);
+
+    void setMute(bool mute);
+
+    void setChannelSolo(int channel);
+
 
 
 

@@ -62,6 +62,16 @@ public:
 
     void release();
 
+    int getDuration();
+
+    void setVolume(int volume);
+
+    void setMute(bool mute);
+
+    void setChannelSolo(int channel);
+
+
+
 
 
     ~LXFFmpeg();

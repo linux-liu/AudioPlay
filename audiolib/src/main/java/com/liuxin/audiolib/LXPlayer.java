@@ -32,6 +32,8 @@ public class LXPlayer {
     private final int MSG_ERROR=0x127;
     private final int MSG_CALL_SWITCH=0x128;
 
+
+
     private Handler mHandler=new Handler(Looper.getMainLooper()){
 
         @Override
@@ -183,6 +185,7 @@ public class LXPlayer {
         if(TextUtils.isEmpty(url)) return;
         this.url=url;
         isSwitch=true;
+
         release();
 
     }
@@ -198,4 +201,22 @@ public class LXPlayer {
     public native void seek(int sec);
 
     public native void release();
+
+    public native int getDuration();
+
+    /**
+     * 0到100 0最小 100最大
+     * @param volume
+     */
+    public native void setVolume(int volume);
+
+    public native void setMute(boolean mute);
+
+    /**
+     *
+     * @param channel  0左声道 1右声道 2立体声
+     */
+    public native void setChannelSolo(int channel);
+
+
 }

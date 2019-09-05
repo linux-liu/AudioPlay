@@ -36,7 +36,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__nat
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\native-lib.cpp.o.d
   FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../src/main/jniLibs/includes -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
   IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\native-lib.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
@@ -44,7 +44,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/CallJava.cpp.o: CXX_COMPILER__nativ
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\CallJava.cpp.o.d
   FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../src/main/jniLibs/includes -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
   IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\CallJava.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
@@ -52,7 +52,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/LXFFmpeg.cpp.o: CXX_COMPILER__nativ
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\LXFFmpeg.cpp.o.d
   FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../src/main/jniLibs/includes -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
   IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\LXFFmpeg.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
@@ -60,7 +60,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/Audio.cpp.o: CXX_COMPILER__native-l
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\Audio.cpp.o.d
   FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../src/main/jniLibs/includes -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
   IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\Audio.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
@@ -68,7 +68,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/AvPacketQuene.cpp.o: CXX_COMPILER__
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\AvPacketQuene.cpp.o.d
   FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../src/main/jniLibs/includes -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
   IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\AvPacketQuene.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
@@ -76,10 +76,122 @@ build CMakeFiles/native-lib.dir/src/main/cpp/PlayStatus.cpp.o: CXX_COMPILER__nat
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\PlayStatus.cpp.o.d
   FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
-  INCLUDES = -I../../../../src/main/jniLibs/includes -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
   IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\PlayStatus.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/AAFilter.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/AAFilter.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\AAFilter.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\AAFilter.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/FIRFilter.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/FIRFilter.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\FIRFilter.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\FIRFilter.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/BPMDetect.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/BPMDetect.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\BPMDetect.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\BPMDetect.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/PeakFinder.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/PeakFinder.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\PeakFinder.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\PeakFinder.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/cpu_detect_x86.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/cpu_detect_x86.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\cpu_detect_x86.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\cpu_detect_x86.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/FIFOSampleBuffer.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/FIFOSampleBuffer.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\FIFOSampleBuffer.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\FIFOSampleBuffer.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/InterpolateCubic.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/InterpolateCubic.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\InterpolateCubic.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\InterpolateCubic.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/InterpolateLinear.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/InterpolateLinear.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\InterpolateLinear.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\InterpolateLinear.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/InterpolateShannon.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/InterpolateShannon.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\InterpolateShannon.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\InterpolateShannon.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/mmx_optimized.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/mmx_optimized.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\mmx_optimized.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\mmx_optimized.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/RateTransposer.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/RateTransposer.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\RateTransposer.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\RateTransposer.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/SoundTouch.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/SoundTouch.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\SoundTouch.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\SoundTouch.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/sse_optimized.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/sse_optimized.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\sse_optimized.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\sse_optimized.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
+build CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/TDStretch.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/soundtouch/TDStretch.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch\TDStretch.cpp.o.d
+  FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC
+  INCLUDES = -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+  IN_ABS = D:\myworkspace\AudioPlay\audiolib\src\main\cpp\soundtouch\TDStretch.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\soundtouch
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target native-lib
@@ -88,7 +200,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/PlayStatus.cpp.o: CXX_COMPILER__nat
 #############################################
 # Link the shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86\libnative-lib.so
 
-build ../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/CallJava.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/LXFFmpeg.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/Audio.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/AvPacketQuene.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/PlayStatus.cpp.o | ../../../../src/main/jniLibs/x86/libavutil.so ../../../../src/main/jniLibs/x86/libswresample.so ../../../../src/main/jniLibs/x86/libswscale.so ../../../../src/main/jniLibs/x86/libavcodec.so ../../../../src/main/jniLibs/x86/libavformat.so ../../../../src/main/jniLibs/x86/libavfilter.so ../../../../src/main/jniLibs/x86/libavdevice.so D$:/sdk/ndk-bundle/platforms/android-14/arch-x86/usr/lib/liblog.so D$:/sdk/ndk-bundle/platforms/android-14/arch-x86/usr/lib/libandroid.so
+build ../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/CallJava.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/LXFFmpeg.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/Audio.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/AvPacketQuene.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/PlayStatus.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/AAFilter.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/FIRFilter.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/BPMDetect.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/PeakFinder.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/cpu_detect_x86.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/FIFOSampleBuffer.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/InterpolateCubic.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/InterpolateLinear.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/InterpolateShannon.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/mmx_optimized.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/RateTransposer.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/SoundTouch.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/sse_optimized.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/soundtouch/TDStretch.cpp.o | ../../../../src/main/jniLibs/x86/libavutil.so ../../../../src/main/jniLibs/x86/libswresample.so ../../../../src/main/jniLibs/x86/libswscale.so ../../../../src/main/jniLibs/x86/libavcodec.so ../../../../src/main/jniLibs/x86/libavformat.so ../../../../src/main/jniLibs/x86/libavfilter.so ../../../../src/main/jniLibs/x86/libavdevice.so D$:/sdk/ndk-bundle/platforms/android-14/arch-x86/usr/lib/liblog.so D$:/sdk/ndk-bundle/platforms/android-14/arch-x86/usr/lib/libandroid.so
   LANGUAGE_COMPILE_FLAGS = -isystem D:/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a --sysroot D:/sdk/ndk-bundle/platforms/android-14/arch-x86 -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now
   LINK_LIBRARIES = -lOpenSLES ../../../../src/main/jniLibs/x86/libavutil.so ../../../../src/main/jniLibs/x86/libswresample.so ../../../../src/main/jniLibs/x86/libswscale.so ../../../../src/main/jniLibs/x86/libavcodec.so ../../../../src/main/jniLibs/x86/libavformat.so ../../../../src/main/jniLibs/x86/libavfilter.so ../../../../src/main/jniLibs/x86/libavdevice.so -llog -landroid -lm "D:/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/libgnustl_static.a"

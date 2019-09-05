@@ -19,37 +19,35 @@
 
     <Button
         android:id="@+id/btnC_to_java"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-
+        android:layout_marginTop="16dp"
         android:onClick="CToJava"
-
         android:text="开始"
         app:layout_constraintTop_toBottomOf="@id/sample_text"
         />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:onClick="release"
         android:text="释放"
-        app:layout_constraintTop_toBottomOf="@id/btnC_to_java" />
+        app:layout_constraintTop_toTopOf="@id/btnC_to_java"
+        app:layout_constraintLeft_toRightOf="@id/btnC_to_java" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="播放"
         android:onClick="play"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="@id/button"
+        app:layout_constraintLeft_toRightOf="@id/button" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="暂停"
         android:onClick="pause"
@@ -57,20 +55,67 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="下一首"
         android:onClick="next"
-        app:layout_constraintTop_toBottomOf="@id/button3"/>
-
+        app:layout_constraintTop_toTopOf="@id/button3"
+        app:layout_constraintLeft_toRightOf="@id/button3"/>
     <Button
         android:id="@+id/button5"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="seek"
-        android:onClick="seek"
+        android:text="静音"
+        android:onClick="mute"
+        app:layout_constraintTop_toTopOf="@id/button3"
+        app:layout_constraintLeft_toRightOf="@id/button4"/>
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="左声道"
+        android:onClick="leftChannel"
         app:layout_constraintTop_toBottomOf="@id/button4"/>
 
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="右声道"
+        android:onClick="RightChannel"
+        app:layout_constraintTop_toTopOf="@id/button6"
+        app:layout_constraintLeft_toRightOf="@id/button6"/>
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="立体声"
+        android:onClick="StreoChannel"
+        app:layout_constraintTop_toTopOf="@id/button6"
+        app:layout_constraintLeft_toRightOf="@id/button7"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进度"
+        android:id="@+id/tv_jd"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button8"
+        app:layout_constraintRight_toLeftOf="@id/seek"
+        />
+
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tv_jd"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button8"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -80,6 +125,30 @@
         android:text="00:00"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/seek" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音量"
+        android:id="@+id/tv_yl"
+        android:layout_marginTop="21dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintRight_toLeftOf="@id/seek_volume"
+        />
+    <SeekBar
+        android:id="@+id/seek_volume"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_yl"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        />
+
+
+
 
 </android.support.constraint.ConstraintLayout>
