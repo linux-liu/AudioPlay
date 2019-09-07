@@ -49,6 +49,7 @@ public:
     SLAndroidSimpleBufferQueueItf slBufferQueueItf=NULL;
 
 
+
    //混音
     SLObjectItf muixObject=NULL;
     SLEnvironmentalReverbItf  outEnvironmentalReverbItf=NULL;
@@ -59,6 +60,7 @@ public:
     SLPlayItf    slPlayItf=NULL;
     SLVolumeItf  slVolumeItf=NULL;
     SLMuteSoloItf slMuteSoloItf=NULL;
+    SLPlaybackRateItf slPlaybackRateItf=NULL;
 
     pthread_mutex_t sl_mutex;
 

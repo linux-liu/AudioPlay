@@ -50,3 +50,7 @@
 6	382	0	CMakeFiles/native-lib.dir/src/main/cpp/LXFFmpeg.cpp.o	b9fc6a2160c85745
 3	477	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	134e0d6dc9f944a7
 488	669	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	eb51c1076baf2041
+6	270	0	CMakeFiles/native-lib.dir/src/main/cpp/LXFFmpeg.cpp.o	b9fc6a2160c85745
+3	366	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	134e0d6dc9f944a7
+10	427	0	CMakeFiles/native-lib.dir/src/main/cpp/Audio.cpp.o	4b409cd14816b2f
+438	589	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	eb51c1076baf2041

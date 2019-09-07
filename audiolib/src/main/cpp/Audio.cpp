@@ -287,8 +287,8 @@ void Audio::initSLES() {
     SLDataSource slDataSource = {&android_queue, &pcm};
 
 
-    const SLInterfaceID ids[3] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME, SL_IID_MUTESOLO};
-    const SLboolean req[3] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};
+    const SLInterfaceID ids[4] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME,SL_IID_PLAYBACKRATE, SL_IID_MUTESOLO};
+    const SLboolean req[4] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE,SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};
 
     result = (*slEngineItf)->CreateAudioPlayer(slEngineItf, &playerObject, &slDataSource, &audioSnk,
                                                3, ids, req);
@@ -302,6 +302,9 @@ void Audio::initSLES() {
 
     //获取音量接口
     (*playerObject)->GetInterface(playerObject, SL_IID_VOLUME, &slVolumeItf);
+
+    //改变速率
+    (*playerObject)->GetInterface(playerObject,SL_IID_PLAYBACKRATE,&slPlaybackRateItf);
 
     //声道切换
     (*playerObject)->GetInterface(playerObject, SL_IID_MUTESOLO, &slMuteSoloItf);
@@ -467,6 +470,7 @@ void Audio::release() {
         slBufferQueueItf = NULL;
         slVolumeItf = NULL;
         slMuteSoloItf = NULL;
+        slPlaybackRateItf=NULL;
     }
 
     if (muixObject) {
