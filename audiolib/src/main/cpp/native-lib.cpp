@@ -212,4 +212,24 @@ Java_com_liuxin_audiolib_LXPlayer_setChannelSolo(JNIEnv *env, jobject instance, 
         lxfFmpeg->setChannelSolo(channel);
     }
 
+}extern "C"
+JNIEXPORT void JNICALL
+Java_com_liuxin_audiolib_LXPlayer_setPitch(JNIEnv *env, jobject instance, jdouble pitch) {
+
+    // TODO
+
+    if (lxfFmpeg != NULL) {
+        lxfFmpeg->setPitch(pitch);
+    }
+
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_liuxin_audiolib_LXPlayer_setTemPo(JNIEnv *env, jobject instance, jdouble temPo) {
+
+    // TODO
+    if (lxfFmpeg != NULL) {
+        lxfFmpeg->setTempPo(temPo);
+    }
 }

@@ -371,6 +371,19 @@ void LXFFmpeg::setChannelSolo(int channel) {
     }
 }
 
+void LXFFmpeg::setPitch(double pitch) {
+    if(audio!=NULL){
+        audio->setPitch(pitch);
+    }
+
+}
+
+void LXFFmpeg::setTempPo(double temPo) {
+    if(audio!=NULL){
+        audio->setTempPo(temPo);
+    }
+}
+
 
 
 

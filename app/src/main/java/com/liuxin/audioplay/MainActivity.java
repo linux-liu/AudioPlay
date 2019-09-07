@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.liuxin.audiolib.LXPlayer;
 import com.liuxin.audiolib.OnCompleteListener;
+import com.liuxin.audiolib.OnDBListener;
 import com.liuxin.audiolib.OnErrorListener;
 import com.liuxin.audiolib.OnPlayStatusListener;
 import com.liuxin.audiolib.OnPrepareListener;
@@ -25,15 +26,15 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-  private LXPlayer lxPlayer;
-  private TextView textView;
-  private TextView tv;
-  private SeekBar seekBar;
-  private int duration;
-  private boolean isTouch=false;
-  private int volume=100;
-  private SeekBar sbVolume;
-  private boolean mute=false;
+    private LXPlayer lxPlayer;
+    private TextView textView;
+    private TextView tv;
+    private SeekBar seekBar;
+    private int duration;
+    private boolean isTouch = false;
+    private int volume = 100;
+    private SeekBar sbVolume;
+    private boolean mute = false;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -42,17 +43,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Example of a call to a native method
-        tv= findViewById(R.id.sample_text);
+        tv = findViewById(R.id.sample_text);
 
-        textView =findViewById(R.id.textView);
-        seekBar=findViewById(R.id.seek);
-        sbVolume=findViewById(R.id.seek_volume);
+        textView = findViewById(R.id.textView);
+        seekBar = findViewById(R.id.seek);
+        sbVolume = findViewById(R.id.seek_volume);
         tv.setText("初始状态");
         sbVolume.setProgress(volume);
 
 
-
-        if (PackageManager.PERMISSION_GRANTED!= ContextCompat.checkSelfPermission(this,
+        if (PackageManager.PERMISSION_GRANTED != ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             if (Build.VERSION.SDK_INT >= 23) {
                 try {
@@ -72,30 +72,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-        }else{
+        } else {
             //已经授权过了
         }
 
 
-       // tv.setText(demo.stringFromJNI());
-        lxPlayer=LXPlayer.getInstance();
+        // tv.setText(demo.stringFromJNI());
+        lxPlayer = LXPlayer.getInstance();
 
 
-
-        lxPlayer.setOnPlayStatusListener(new OnPlayStatusListener(){
+        lxPlayer.setOnPlayStatusListener(new OnPlayStatusListener() {
 
             @Override
             public void playStatus(final int status) {
-                if(status==1){
+                if (status == 1) {
                     tv.setText("播放状态");
-                }else if(status==2){
+                } else if (status == 2) {
                     tv.setText("暂停状态");
-                }else if(status==3){
+                } else if (status == 3) {
                     tv.setText("停止状态");
-                }else if(status==0){
+                } else if (status == 0) {
                     tv.setText("初始状态");
                 }
-
 
 
             }
@@ -103,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         lxPlayer.setOnPrepareListener(new OnPrepareListener() {
             @Override
             public void prepare() {
-                duration=lxPlayer.getDuration();
+                duration = lxPlayer.getDuration();
                 lxPlayer.start();
 
             }
@@ -113,15 +111,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void progress(int duration, int current) {
 
-                if(!isTouch){
-                    final int min=duration/60;
-                    final int sec=duration%60;
-                    final int cumin=current/60;
-                    final int cusec=current%60;
-                    textView.setText(cumin+":"+cusec+"/"+min+":"+sec);
-                    if(duration!=0){
-                        seekBar.setProgress(current*100/duration);
-                    }else {
+                if (!isTouch) {
+                    final int min = duration / 60;
+                    final int sec = duration % 60;
+                    final int cumin = current / 60;
+                    final int cusec = current % 60;
+                    textView.setText(cumin + ":" + cusec + "/" + min + ":" + sec);
+                    if (duration != 0) {
+                        seekBar.setProgress(current * 100 / duration);
+                    } else {
                         seekBar.setProgress(0);
                     }
 
@@ -134,39 +132,46 @@ public class MainActivity extends AppCompatActivity {
         lxPlayer.setOnErrorListener(new OnErrorListener() {
             @Override
             public void error(int code, String msg) {
-                Log.e("ffmepg","error code==>"+code+" msg==>"+msg+"thread=>"+Thread.currentThread().getName());
+                Log.e("ffmepg", "error code==>" + code + " msg==>" + msg + "thread=>" + Thread.currentThread().getName());
             }
         });
         lxPlayer.setOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete() {
-                 Log.e("ffmpeg","完成");
+                Log.e("ffmpeg", "完成");
+            }
+        });
+
+        lxPlayer.setOnDBListener(new OnDBListener() {
+            @Override
+            public void currentDB(int db) {
+                Log.e("ffmpeg", "当前的db==>" + db);
             }
         });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                 if(fromUser){
-                     final int min=duration/60;
-                     final int sec=duration%60;
-                     int current=duration*progress/seekBar.getMax();
-                     final int cumin=current/60;
-                     final int cusec=current%60;
-                     textView.setText(cumin+":"+cusec+"/"+min+":"+sec);
+                if (fromUser) {
+                    final int min = duration / 60;
+                    final int sec = duration % 60;
+                    int current = duration * progress / seekBar.getMax();
+                    final int cumin = current / 60;
+                    final int cusec = current % 60;
+                    textView.setText(cumin + ":" + cusec + "/" + min + ":" + sec);
 
-                 }
+                }
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                isTouch=true;
+                isTouch = true;
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                   isTouch=false;
-                   int currentSec= duration*seekBar.getProgress()/seekBar.getMax();
-                   lxPlayer.seek(currentSec);
+                isTouch = false;
+                int currentSec = duration * seekBar.getProgress() / seekBar.getMax();
+                lxPlayer.seek(currentSec);
 
 
             }
@@ -174,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
         sbVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                volume=seekBar.getProgress();
+                volume = seekBar.getProgress();
                 lxPlayer.setVolume(seekBar.getProgress());
             }
 
@@ -190,22 +195,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
 
     public void CToJava(View view) {
-        lxPlayer.prepare("http://od.qingting.fm/m4a/5cfbe4377cb8915f99370adb_12803144_24.m4a");
-
+       lxPlayer.prepare("http://od.qingting.fm/m4a/5cfbe4377cb8915f99370adb_12803144_24.m4a");
+       //lxPlayer.prepare("http://m10.music.126.net/20190907172509/5916d1c884ee670055a9de827caec36d/ymusic/45e9/a753/473c/6117d81068fe516650edec30f8b1be0b.mp3");
 
     }
 
 
     public void release(View view) {
-         duration=0;
-         volume=100;
-         sbVolume.setProgress(volume);
+        duration = 0;
+        volume = 100;
+        sbVolume.setProgress(volume);
         lxPlayer.release();
 
     }
@@ -219,15 +222,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void next(View view) {
-        duration=0;
-        volume=100;
+        duration = 0;
+        volume = 100;
         sbVolume.setProgress(volume);
         lxPlayer.nextOrPre("http://od.qingting.fm/m4a/5a0af44f7cb8914779263740_8222397_24.m4a");
     }
 
 
     public void mute(View view) {
-        mute=!mute;
+        mute = !mute;
         lxPlayer.setMute(mute);
     }
 
@@ -241,5 +244,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void leftChannel(View view) {
         lxPlayer.setChannelSolo(0);
+    }
+
+    public void Pitch(View view) {
+        lxPlayer.setPitch(1.5);
+    }
+
+    public void TemPo(View view) {
+        lxPlayer.setTemPo(1.5);
     }
 }

@@ -17,10 +17,12 @@ extern "C"{
 #include <SLES/OpenSLES_Android.h>
 #include <SLES/OpenSLES.h>
 #include <unistd.h>
+#include "SoundTouch.h"
+#include <math.h>
 #define OUT_SAMPLE_RATE 44100
 #define OUT_CHANNEL_NB 2
 #define OUT_FORMAT  AVSampleFormat::AV_SAMPLE_FMT_S16
-
+using namespace soundtouch;
 class Audio {
 public:
     int audioStreamIndex=-1;
@@ -35,7 +37,7 @@ public:
     int64_t duration=0;
     double current=0;
     AVRational time_base;
-    double pre_time;
+    double pre_time=0;
 
 
     pthread_t decode_thread;
@@ -60,13 +62,30 @@ public:
 
     pthread_mutex_t sl_mutex;
 
+    //soundTouch
+    SoundTouch *soundTouch=NULL;
+    SAMPLETYPE *sampletype=NULL; //处理后的音频数据
+    double pitch=1.0;//变调
+    double tempPo=1.0;//变速
+    int per_number_sample=0;//每个通道数的采样个数
+    bool finished = true; //当前这次采样是否采样完成
+    uint8_t *out_buffer = NULL; //临时指针
+    int num = 0;
+    int data_size=0;
+
+    //db
+    time_t  pretime=0;
+    time_t  nowtime=0;
+
+
+
 
 
 public:
     Audio(PlayStatus *status,CallJava *callJava,AvPacketQuene *packetQuene);
     void  resample();
 
-    int start();
+    int start(uint8_t **temp);
 
     void pause();
 
@@ -83,6 +102,12 @@ public:
     void setChannelSolo(int channel);
 
 
+    int dealSoundTouch();
+
+    void  setPitch(double pitch);
+    void setTempPo(double temPo);
+
+    int getPCMDB(SAMPLETYPE * bufferData,size_t size);
 
 
     void initSLES();

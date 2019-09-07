@@ -13,6 +13,13 @@ Audio::Audio(PlayStatus *status, CallJava *callJava1, AvPacketQuene *packetQuene
     pre_time = 0;
     data = (uint8_t *) av_malloc(OUT_CHANNEL_NB * 2 * OUT_SAMPLE_RATE);
     pthread_mutex_init(&sl_mutex, NULL);
+    soundTouch = new SoundTouch();
+    sampletype = (SAMPLETYPE *) malloc(OUT_SAMPLE_RATE * 2 * 2);
+    soundTouch->setSampleRate(OUT_SAMPLE_RATE);
+    soundTouch->setChannels(OUT_CHANNEL_NB);
+    soundTouch->setPitch(pitch);
+    soundTouch->setTempo(tempPo);
+
 
 }
 
@@ -27,8 +34,8 @@ void Audio::resample() {
 }
 
 
-int Audio::start() {
-    int readBufferSize = 0;
+int Audio::start(uint8_t **temp) {
+    data_size = 0;
     while (playStatus != NULL && !playStatus->isExit) {
         unsigned int size = avPacketQuene->getSize();
         int ret = 0;
@@ -83,17 +90,18 @@ int Audio::start() {
                 }
 
 
-                int per_number_sample = swr_convert(swrContext, &data, avFrame->nb_samples,
-                                                    (const uint8_t **) avFrame->data,
-                                                    avFrame->nb_samples);
+                per_number_sample = swr_convert(swrContext, &data, avFrame->nb_samples,
+                                                (const uint8_t **) avFrame->data,
+                                                avFrame->nb_samples);
 
                 int frame_size_by_byte =
                         per_number_sample * OUT_CHANNEL_NB * av_get_bytes_per_sample(OUT_FORMAT);
 
-                readBufferSize = frame_size_by_byte;
+                data_size = frame_size_by_byte;
 
                 current = avFrame->pts * av_q2d(time_base);
 
+                *temp = data;
                 av_packet_free(&avPacket);
                 av_freep(&avPacket);
                 avPacket = NULL;
@@ -133,24 +141,95 @@ int Audio::start() {
 
         }
     }
-    return readBufferSize;
+    return data_size;
 }
 
 
 static void bufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *data) {
     Audio *audio = (Audio *) data;
-    int buffsize = audio->start();
-    double show_time = buffsize / (double) (OUT_SAMPLE_RATE * OUT_CHANNEL_NB * 2);
+    int buffsize = audio->dealSoundTouch();
+    if (buffsize > 0) {
+        double show_time = buffsize / (double) (OUT_SAMPLE_RATE);
 
-    audio->current = audio->current + show_time;
+        audio->current = audio->current + show_time;
+        if (audio->current - audio->pre_time > 0.5) {
+            audio->callJava->onProgress(ChildThread, (int) audio->duration, (int) audio->current);
+            audio->pre_time = audio->current;
+        }
 
-    if (audio->current - audio->pre_time > 0.5) {
-        audio->callJava->onProgress(ChildThread, (int) audio->duration, (int) audio->current);
-        audio->pre_time = audio->current;
+         audio->nowtime = time(NULL);
+        if (audio->nowtime - audio->pretime >= 1) {
+            int db = audio->getPCMDB(audio->sampletype, buffsize*2);
+            if (audio->callJava != NULL) {
+                audio->callJava->onDb(ChildThread, db);
+            }
+            audio->pretime = audio->nowtime;
+        }
+
+        (*(audio->slBufferQueueItf))->Enqueue(audio->slBufferQueueItf, audio->sampletype,
+                                              buffsize * 2 * 2);
     }
 
-    if (audio->data && buffsize > 0)
-        (*(audio->slBufferQueueItf))->Enqueue(audio->slBufferQueueItf, audio->data, buffsize);
+
+}
+
+int Audio::dealSoundTouch() {
+    while (playStatus != NULL && !playStatus->isExit) {
+        out_buffer = NULL;
+        if (finished) {
+            finished = false;
+            data_size = start(&out_buffer);
+
+
+            if (data_size > 0) {
+                for (int i = 0; i < data_size / 2 + 1; i++) {
+                    //pcm数据为小端，这里需要做一个转换成short类型 字节转换
+                    sampletype[i] = (out_buffer[i * 2] | ((out_buffer[i * 2 + 1]) << 8));
+                }
+                //每个通道的采样率
+                soundTouch->putSamples(sampletype, per_number_sample);
+                //这里接收的的采样数，一次可能获取不完，需要用finish判断是否是新的下一次采样采取
+                num = soundTouch->receiveSamples(sampletype, data_size / 4);
+
+            } else {
+
+                soundTouch->flush();
+            }
+        }
+        if (num == 0) {
+            finished = true;
+
+            continue;
+        } else {
+            if (out_buffer == NULL) {
+                num = soundTouch->receiveSamples(sampletype, data_size / 4);
+
+                if (num == 0) {
+                    finished = true;
+                    continue;
+                }
+            }
+            return num;
+        }
+    }
+    return 0;
+}
+
+int Audio::getPCMDB(SAMPLETYPE *bufferData, size_t size) {
+    int db = 0;
+
+     double  sum = 0;
+    if (bufferData != NULL && size > 0) {
+        for (int i = 0; i < size; i++) {
+            sum =sum+abs(bufferData[i]);
+
+        }
+        sum=sum/size;
+        if (sum >= 1) {
+            db = (int) (20.0 * log10(sum));
+        }
+    }
+    return db;
 }
 
 void Audio::initSLES() {
@@ -208,8 +287,8 @@ void Audio::initSLES() {
     SLDataSource slDataSource = {&android_queue, &pcm};
 
 
-    const SLInterfaceID ids[3] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME,SL_IID_MUTESOLO};
-    const SLboolean req[3] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE,SL_BOOLEAN_TRUE};
+    const SLInterfaceID ids[3] = {SL_IID_BUFFERQUEUE, SL_IID_VOLUME, SL_IID_MUTESOLO};
+    const SLboolean req[3] = {SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE};
 
     result = (*slEngineItf)->CreateAudioPlayer(slEngineItf, &playerObject, &slDataSource, &audioSnk,
                                                3, ids, req);
@@ -225,7 +304,7 @@ void Audio::initSLES() {
     (*playerObject)->GetInterface(playerObject, SL_IID_VOLUME, &slVolumeItf);
 
     //声道切换
-    (*playerObject)->GetInterface(playerObject,SL_IID_MUTESOLO,&slMuteSoloItf);
+    (*playerObject)->GetInterface(playerObject, SL_IID_MUTESOLO, &slMuteSoloItf);
 
 
     //缓冲接口回调
@@ -320,28 +399,43 @@ void Audio::setVolume(int percent) {
     }
 
 }
+
 void Audio::setMute(bool mute) {
     if (slVolumeItf != NULL) {
-        (*slVolumeItf)->SetMute(slVolumeItf,mute);
+        (*slVolumeItf)->SetMute(slVolumeItf, mute);
     }
 }
 
 void Audio::setChannelSolo(int channel) {
-   if(slMuteSoloItf!=NULL){
-       if(channel==0){
-           (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf,0,true);
-           (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf,1,false);
-       } else if(channel==1){
-           (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf,0,false);
-           (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf,1,true);
-       } else{
-           (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf,0,true);
-           (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf,1,true);
-       }
+    if (slMuteSoloItf != NULL) {
+        if (channel == 0) {
+            (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf, 0, true);
+            (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf, 1, false);
+        } else if (channel == 1) {
+            (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf, 0, false);
+            (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf, 1, true);
+        } else {
+            (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf, 0, true);
+            (*slMuteSoloItf)->SetChannelSolo(slMuteSoloItf, 1, true);
+        }
 
-   }
+    }
 }
 
+void Audio::setPitch(double pitch) {
+    if (soundTouch != NULL) {
+        this->pitch = pitch;
+        soundTouch->setPitch(pitch);
+    }
+}
+
+
+void Audio::setTempPo(double temPo) {
+    if (soundTouch != NULL) {
+        this->tempPo = temPo;
+        soundTouch->setTempo(temPo);
+    }
+}
 
 void Audio::release() {
     int try_count = 100000;
@@ -371,8 +465,8 @@ void Audio::release() {
         playerObject = NULL;
         slPlayItf = NULL;
         slBufferQueueItf = NULL;
-        slVolumeItf=NULL;
-        slMuteSoloItf=NULL;
+        slVolumeItf = NULL;
+        slMuteSoloItf = NULL;
     }
 
     if (muixObject) {
@@ -389,12 +483,24 @@ void Audio::release() {
         slEngineItf = NULL;
     }
 
+    if (soundTouch) {
+        delete soundTouch;
+        soundTouch = NULL;
+    }
+
     pthread_mutex_unlock(&sl_mutex);
 
     if (data) {
         av_freep(&data);
         data = NULL;
     }
+
+    if (sampletype) {
+        free(sampletype);
+        sampletype = NULL;
+    }
+
+    out_buffer = NULL;
 
 
 }
@@ -406,6 +512,12 @@ Audio::~Audio() {
     pthread_mutex_destroy(&sl_mutex);
 
 }
+
+
+
+
+
+
 
 
 

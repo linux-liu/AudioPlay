@@ -13,18 +13,20 @@
 
 class CallJava {
 public:
-    JavaVM *jvm;
-    JNIEnv *jnv;
-    jobject jobj;
-    jmethodID jmd;
+    JavaVM *jvm=NULL;
+    JNIEnv *jnv=NULL;
+    jobject jobj=NULL;
+    jmethodID jmd=NULL;
 
-    jmethodID jstatusmd;
+    jmethodID jstatusmd=NULL;
 
-    jmethodID jprogressmd;
+    jmethodID jprogressmd=NULL;
 
-    jmethodID jcompletemd;
+    jmethodID jcompletemd=NULL;
 
-    jmethodID jerrormd;
+    jmethodID jerrormd=NULL;
+
+    jmethodID  jdbmd=NULL;
 
 
 
@@ -44,6 +46,8 @@ public:
     void onPlayStatus(int type,int status);
 
     void onCallSwitch(int type);
+
+    void onDb(int type,int db);
 
     ~CallJava();
 

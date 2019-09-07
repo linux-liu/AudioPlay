@@ -3,13 +3,14 @@ package com.liuxin.audiolib;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.support.v4.app.NavUtils;
 import android.text.TextUtils;
 
 
 public class LXPlayer {
 
 
-    private volatile boolean isSwitch=false;
+    private volatile boolean isSwitch = false;
 
     private OnPrepareListener onPrepareListener;
 
@@ -21,56 +22,63 @@ public class LXPlayer {
 
     private OnErrorListener onErrorListener;
 
+    private OnDBListener onDBListener;
+
     private static LXPlayer lxPlayer;
 
     private String url;
 
-    private  final int MSG_PREPARE=0x123;
-    private final int MSG_PROGRESS=0x124;
-    private final int MSG_PLAYSTATUS=0x125;
-    private final int MSG_COMPLETE=0x126;
-    private final int MSG_ERROR=0x127;
-    private final int MSG_CALL_SWITCH=0x128;
+    private final int MSG_PREPARE = 0x123;
+    private final int MSG_PROGRESS = 0x124;
+    private final int MSG_PLAYSTATUS = 0x125;
+    private final int MSG_COMPLETE = 0x126;
+    private final int MSG_ERROR = 0x127;
+    private final int MSG_CALL_SWITCH = 0x128;
+    private final int MSG_DB = 0x129;
 
 
-
-    private Handler mHandler=new Handler(Looper.getMainLooper()){
+    private Handler mHandler = new Handler(Looper.getMainLooper()) {
 
         @Override
         public void handleMessage(Message msg) {
-            switch (msg.what){
+            switch (msg.what) {
                 case MSG_PREPARE:
-                    if(onPrepareListener!=null){
+                    if (onPrepareListener != null) {
                         onPrepareListener.prepare();
                     }
                     break;
                 case MSG_PROGRESS:
-                    if(onProgressListener!=null){
-                        onProgressListener.progress(msg.arg1,msg.arg2);
+                    if (onProgressListener != null) {
+                        onProgressListener.progress(msg.arg1, msg.arg2);
                     }
                     break;
                 case MSG_PLAYSTATUS:
-                    if(onPlayStatusListener!=null){
+                    if (onPlayStatusListener != null) {
                         onPlayStatusListener.playStatus(msg.arg1);
                     }
                     break;
                 case MSG_COMPLETE:
                     release();
-                    if(onCompleteListener!=null){
+                    if (onCompleteListener != null) {
                         onCompleteListener.onComplete();
                     }
                     break;
                 case MSG_ERROR:
                     release();
-                    if(onErrorListener!=null){
-                        onErrorListener.error(msg.arg1,(String)msg.obj);
+                    if (onErrorListener != null) {
+                        onErrorListener.error(msg.arg1, (String) msg.obj);
                     }
                     break;
 
                 case MSG_CALL_SWITCH:
-                    if(isSwitch){
-                        isSwitch=false;
+                    if (isSwitch) {
+                        isSwitch = false;
                         prepare(url);
+                    }
+                    break;
+                case MSG_DB:
+                    if (onDBListener != null) {
+                        onDBListener.currentDB(msg.arg1);
                     }
                     break;
             }
@@ -78,42 +86,41 @@ public class LXPlayer {
     };
 
 
-
-
-    private LXPlayer(){
+    private LXPlayer() {
 
     }
 
-    public static LXPlayer getInstance(){
-        if(lxPlayer==null){
-            lxPlayer=new LXPlayer();
+    public static LXPlayer getInstance() {
+        if (lxPlayer == null) {
+            lxPlayer = new LXPlayer();
         }
         return lxPlayer;
     }
 
 
-    public void setOnPrepareListener(OnPrepareListener listener){
-        this.onPrepareListener=listener;
+    public void setOnPrepareListener(OnPrepareListener listener) {
+        this.onPrepareListener = listener;
     }
 
-    public void setOnProgressListener(OnProgressListener listener){
-        this.onProgressListener=listener;
+    public void setOnProgressListener(OnProgressListener listener) {
+        this.onProgressListener = listener;
     }
 
-    public void setOnPlayStatusListener(OnPlayStatusListener listener){
-        this.onPlayStatusListener=listener;
+    public void setOnPlayStatusListener(OnPlayStatusListener listener) {
+        this.onPlayStatusListener = listener;
     }
 
-    public void setOnCompleteListener(OnCompleteListener listener){
-        this.onCompleteListener=listener;
+    public void setOnCompleteListener(OnCompleteListener listener) {
+        this.onCompleteListener = listener;
     }
 
-    public void setOnErrorListener(OnErrorListener listener){
-        this.onErrorListener=listener;
+    public void setOnErrorListener(OnErrorListener listener) {
+        this.onErrorListener = listener;
     }
 
-
-
+    public void setOnDBListener(OnDBListener listener) {
+        this.onDBListener = listener;
+    }
 
 
     static {
@@ -125,72 +132,84 @@ public class LXPlayer {
     /**
      * jni调用准备好了的方法
      */
-   private void JniCallPrepare(){
-       Message message=Message.obtain();
-       message.what=MSG_PREPARE;
-       mHandler.sendMessage(message);
+    private void JniCallPrepare() {
+        Message message = Message.obtain();
+        message.what = MSG_PREPARE;
+        mHandler.sendMessage(message);
 
     }
 
 
-    private void JniCallProgress(int duration,int current){
-        Message message=Message.obtain();
-        message.what=MSG_PROGRESS;
-        message.arg1=duration;
-        message.arg2=current;
+    private void JniCallProgress(int duration, int current) {
+        Message message = Message.obtain();
+        message.what = MSG_PROGRESS;
+        message.arg1 = duration;
+        message.arg2 = current;
         mHandler.sendMessage(message);
 
 
     }
 
-    private void JniCallPlayStatus(int status){
-        Message message=Message.obtain();
-        message.what=MSG_PLAYSTATUS;
-        message.arg1=status;
+    private void JniCallPlayStatus(int status) {
+        Message message = Message.obtain();
+        message.what = MSG_PLAYSTATUS;
+        message.arg1 = status;
 
         mHandler.sendMessage(message);
 
     }
 
-    private void JniCallComplete(){
-        Message message=Message.obtain();
-        message.what=MSG_COMPLETE;
+    private void JniCallComplete() {
+        Message message = Message.obtain();
+        message.what = MSG_COMPLETE;
         mHandler.sendMessage(message);
     }
 
-    private void JniCallError(int code,String msg){
+    private void JniCallError(int code, String msg) {
 
-        Message message=Message.obtain();
-        message.what=MSG_ERROR;
-        message.arg1=code;
-        message.obj=msg;
+        Message message = Message.obtain();
+        message.what = MSG_ERROR;
+        message.arg1 = code;
+        message.obj = msg;
         mHandler.sendMessage(message);
 
     }
 
-    private void JniCallSwitch(){
+    private void JniCallSwitch() {
 
-        Message message=Message.obtain();
-        message.what=MSG_CALL_SWITCH;
+        Message message = Message.obtain();
+        message.what = MSG_CALL_SWITCH;
         mHandler.sendMessage(message);
 
+    }
+
+    /**
+     * 当前音乐的分贝值
+     * @param db
+     */
+    private void JniCallDB(int db) {
+        Message message = Message.obtain();
+        message.what = MSG_DB;
+        message.arg1 = db;
+        mHandler.sendMessage(message);
     }
 
 
     /**
      * 所以公有方法在主线程中调用
+     *
      * @param url
      */
-    public void nextOrPre(String url){
-        if(TextUtils.isEmpty(url)) return;
-        this.url=url;
-        isSwitch=true;
+    public void nextOrPre(String url) {
+        if (TextUtils.isEmpty(url)) return;
+        this.url = url;
+        isSwitch = true;
 
         release();
 
     }
 
-    public native void  prepare(String url);
+    public native void prepare(String url);
 
     public native void start();
 
@@ -206,6 +225,7 @@ public class LXPlayer {
 
     /**
      * 0到100 0最小 100最大
+     *
      * @param volume
      */
     public native void setVolume(int volume);
@@ -213,10 +233,15 @@ public class LXPlayer {
     public native void setMute(boolean mute);
 
     /**
-     *
-     * @param channel  0左声道 1右声道 2立体声
+     * @param channel 0左声道 1右声道 2立体声
      */
     public native void setChannelSolo(int channel);
+
+    //变调
+    public native void setPitch(double pitch);
+
+    //变速
+    public native void setTemPo(double temPo);
 
 
 }

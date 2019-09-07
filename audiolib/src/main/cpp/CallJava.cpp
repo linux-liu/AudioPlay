@@ -14,6 +14,7 @@ CallJava::CallJava(JavaVM *javaVM, JNIEnv *jniEnv, jobject obj) {
     this->jstatusmd=jniEnv->GetMethodID(jcls,"JniCallPlayStatus","(I)V");
     this->jcompletemd=jniEnv->GetMethodID(jcls,"JniCallComplete","()V");
     this->jerrormd=jniEnv->GetMethodID(jcls,"JniCallError","(ILjava/lang/String;)V");
+    this->jdbmd=jniEnv->GetMethodID(jcls,"JniCallDB","(I)V");
 
 }
 
@@ -105,6 +106,20 @@ void CallJava::onError(int type, int code, char *msg) {
         jnv->CallVoidMethod(jobj,jerrormd,code,strMsg);
 
         jnv->DeleteLocalRef(strMsg);
+    }
+}
+
+void CallJava::onDb(int type, int db) {
+    if(type==ChildThread){
+        JNIEnv *jniEnv=NULL;
+        jvm->AttachCurrentThread(&jniEnv,NULL);
+
+        jniEnv->CallVoidMethod(jobj,jdbmd,db);
+
+        jvm->DetachCurrentThread();
+    } else if(type==MainThread){
+
+        jnv->CallVoidMethod(jobj,jdbmd,db);
     }
 }
 

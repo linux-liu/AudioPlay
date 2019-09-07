@@ -70,7 +70,8 @@ public:
 
     void setChannelSolo(int channel);
 
-
+    void  setPitch(double pitch);
+    void setTempPo(double temPo);
 
 
 
