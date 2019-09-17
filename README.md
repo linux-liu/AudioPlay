@@ -2,7 +2,7 @@
 ### 下图为实现的功能图
 ![image](https://github.com/linux-liu/AudioPlay/blob/master/122.jpg)
 
-###使用方法
+### 使用方法
 主要使用LXPlayer这个类,如下
 ```java
  lxPlayer = LXPlayer.getInstance();
