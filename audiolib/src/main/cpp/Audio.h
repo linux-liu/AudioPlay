@@ -32,6 +32,8 @@ public:
     PlayStatus *playStatus=NULL;
     uint8_t *data=NULL;
     bool  isReadFinish= false;
+    bool  isFinishReceive=true;
+
 
 
     int64_t duration=0;
@@ -88,6 +90,7 @@ public:
     void  resample();
 
     int start(uint8_t **temp);
+
 
     void pause();
 

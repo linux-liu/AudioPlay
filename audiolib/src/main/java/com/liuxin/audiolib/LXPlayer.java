@@ -24,6 +24,8 @@ public class LXPlayer {
 
     private OnDBListener onDBListener;
 
+    private OnLoadListener onLoadListener;
+
     private static LXPlayer lxPlayer;
 
     private String url;
@@ -35,6 +37,7 @@ public class LXPlayer {
     private final int MSG_ERROR = 0x127;
     private final int MSG_CALL_SWITCH = 0x128;
     private final int MSG_DB = 0x129;
+    private final int MSG_LOAD=0x130;
 
 
     private Handler mHandler = new Handler(Looper.getMainLooper()) {
@@ -81,6 +84,12 @@ public class LXPlayer {
                         onDBListener.currentDB(msg.arg1);
                     }
                     break;
+
+                case MSG_LOAD:
+                    if(onLoadListener!=null){
+                        onLoadListener.onLoad((boolean) msg.obj);
+                    }
+                    break;
             }
         }
     };
@@ -122,6 +131,11 @@ public class LXPlayer {
         this.onDBListener = listener;
     }
 
+
+
+    public void setOnLoadListener(OnLoadListener listener){
+        this.onLoadListener=listener;
+    }
 
     static {
         System.loadLibrary("native-lib");
@@ -191,6 +205,14 @@ public class LXPlayer {
         Message message = Message.obtain();
         message.what = MSG_DB;
         message.arg1 = db;
+        mHandler.sendMessage(message);
+    }
+
+
+    private void JniCallLoad(boolean isLoad){
+        Message message = Message.obtain();
+        message.what = MSG_LOAD;
+        message.obj=isLoad;
         mHandler.sendMessage(message);
     }
 

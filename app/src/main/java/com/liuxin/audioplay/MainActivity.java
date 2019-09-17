@@ -3,6 +3,7 @@ package com.liuxin.audioplay;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.PermissionChecker;
@@ -17,6 +18,7 @@ import com.liuxin.audiolib.LXPlayer;
 import com.liuxin.audiolib.OnCompleteListener;
 import com.liuxin.audiolib.OnDBListener;
 import com.liuxin.audiolib.OnErrorListener;
+import com.liuxin.audiolib.OnLoadListener;
 import com.liuxin.audiolib.OnPlayStatusListener;
 import com.liuxin.audiolib.OnPrepareListener;
 import com.liuxin.audiolib.OnProgressListener;
@@ -107,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        lxPlayer.setOnLoadListener(new OnLoadListener() {
+            @Override
+            public void onLoad(boolean isLoad) {
+                Log.e("ffmpeg","isLoad==>"+isLoad);
+            }
+        });
+
         lxPlayer.setOnProgressListener(new OnProgressListener() {
             @Override
             public void progress(int duration, int current) {
@@ -145,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         lxPlayer.setOnDBListener(new OnDBListener() {
             @Override
             public void currentDB(int db) {
-                Log.e("ffmpeg", "当前的db==>" + db);
+           //     Log.e("ffmpeg", "当前的db==>" + db);
             }
         });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -199,9 +208,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void CToJava(View view) {
-       lxPlayer.prepare("http://od.qingting.fm/m4a/5cfbe4377cb8915f99370adb_12803144_24.m4a");
+      lxPlayer.prepare("http://od.qingting.fm/m4a/5cfbe4377cb8915f99370adb_12803144_24.m4a");
        //lxPlayer.prepare("http://m10.music.126.net/20190907172509/5916d1c884ee670055a9de827caec36d/ymusic/45e9/a753/473c/6117d81068fe516650edec30f8b1be0b.mp3");
-
+      //lxPlayer.prepare( Environment.getExternalStorageDirectory() + "/testv/1077205091002.dat");
     }
 
 

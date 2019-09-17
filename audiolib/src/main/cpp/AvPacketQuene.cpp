@@ -35,6 +35,8 @@ int AvPacketQuene::pullQueue(AVPacket *avPacket) {
         AVPacket *pkt=queue->front();
         if(av_packet_ref(avPacket,pkt)==0){
             queue->pop();
+        } else{
+            return -1;
         }
         av_packet_free(&pkt);
         av_freep(&pkt);

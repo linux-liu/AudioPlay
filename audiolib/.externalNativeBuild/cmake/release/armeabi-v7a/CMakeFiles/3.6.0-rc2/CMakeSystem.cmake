@@ -1,13 +1,13 @@
-set(CMAKE_HOST_SYSTEM "Windows-6.1.7601")
-set(CMAKE_HOST_SYSTEM_NAME "Windows")
-set(CMAKE_HOST_SYSTEM_VERSION "6.1.7601")
-set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
+set(CMAKE_HOST_SYSTEM "Linux-4.15.0-46-generic")
+set(CMAKE_HOST_SYSTEM_NAME "Linux")
+set(CMAKE_HOST_SYSTEM_VERSION "4.15.0-46-generic")
+set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("D:/sdk/ndk-bundle/build/cmake/android.toolchain.cmake")
+include("/home/liuxin/Android/Sdk/ndk-bundle/build/cmake/android.toolchain.cmake")
 
-set(CMAKE_SYSTEM "Android-14")
+set(CMAKE_SYSTEM "Android-1")
 set(CMAKE_SYSTEM_NAME "Android")
-set(CMAKE_SYSTEM_VERSION "14")
+set(CMAKE_SYSTEM_VERSION "1")
 set(CMAKE_SYSTEM_PROCESSOR "armv7-a")
 
 set(CMAKE_CROSSCOMPILING "TRUE")

@@ -34,30 +34,55 @@ void Audio::resample() {
 }
 
 
+
+
 int Audio::start(uint8_t **temp) {
     data_size = 0;
     while (playStatus != NULL && !playStatus->isExit) {
+        if(playStatus->isSeek){
+            callJava->onLoad(ChildThread, true);
+            usleep(1000*100);
+            continue;
+        }
+
         unsigned int size = avPacketQuene->getSize();
+      //  ALOGE("size==>%d",size);
         int ret = 0;
         if (size > 0) {
+            callJava->onLoad(ChildThread, false);
             //  ALOGD("有数据了");
-            AVPacket *avPacket = av_packet_alloc();
-            avPacketQuene->pullQueue(avPacket);
-            ret = avcodec_send_packet(codecContext, avPacket);
-            if (ret < 0) {
-                av_packet_free(&avPacket);
-                av_freep(&avPacket);
-                avPacket = NULL;
-                continue;
+            AVPacket *avPacket=NULL;
+            if(isFinishReceive){
+                avPacket = av_packet_alloc();
+                ret=avPacketQuene->pullQueue(avPacket);
+                if(ret<0){
+                    av_packet_free(&avPacket);
+                    av_freep(&avPacket);
+                    avPacket = NULL;
+                    usleep(1000*100);
+                    continue;
+                }
+                ret = avcodec_send_packet(codecContext, avPacket);
+                if (ret < 0) {
+                    av_packet_free(&avPacket);
+                    av_freep(&avPacket);
+                    avPacket = NULL;
+                    usleep(1000*100);
+                    continue;
+                }
             }
+
             AVFrame *avFrame = av_frame_alloc();
             avFrame->channels = codecContext->channels;
             avFrame->channel_layout = codecContext->channel_layout;
             avFrame->format = codecContext->sample_fmt;
             avFrame->sample_rate = codecContext->sample_rate;
             avFrame->nb_samples = codecContext->frame_size;
+
             ret = avcodec_receive_frame(codecContext, avFrame);
-            if (ret == 0) {
+
+            if(ret==0) {
+                 isFinishReceive= false;
                 if (avFrame->channels <= 0 && avFrame->channel_layout > 0) {
                     avFrame->channels = av_get_channel_layout_nb_channels(avFrame->channel_layout);
 
@@ -75,9 +100,12 @@ int Audio::start(uint8_t **temp) {
                                                             avFrame->sample_rate, 0, NULL);
 
                 if (swrContext == NULL || swr_init(swrContext) < 0) {
-                    av_packet_free(&avPacket);
-                    av_freep(&avPacket);
-                    avPacket = NULL;
+                    if(avPacket){
+                        av_packet_free(&avPacket);
+                        av_freep(&avPacket);
+                        avPacket = NULL;
+                    }
+
 
                     av_frame_free(&avFrame);
                     av_freep(&avFrame);
@@ -85,8 +113,8 @@ int Audio::start(uint8_t **temp) {
                     if (swrContext != NULL) {
                         swr_free(&swrContext);
                     }
+                    usleep(1000*100);
                     continue;
-
                 }
 
 
@@ -99,47 +127,55 @@ int Audio::start(uint8_t **temp) {
 
                 data_size = frame_size_by_byte;
 
-                current = avFrame->pts * av_q2d(time_base);
+
+                if(avFrame->pts==AV_NOPTS_VALUE){
+                   current=current+(avFrame->nb_samples)*av_q2d(time_base);
+                } else{
+                    current = avFrame->pts * av_q2d(time_base);
+                }
+
+
 
                 *temp = data;
-                av_packet_free(&avPacket);
-                av_freep(&avPacket);
-                avPacket = NULL;
-
+                if(avPacket) {
+                    av_packet_free(&avPacket);
+                    av_freep(&avPacket);
+                    avPacket = NULL;
+                }
                 av_frame_free(&avFrame);
                 av_freep(&avFrame);
                 avFrame = NULL;
-                if (swrContext != NULL) {
-                    swr_free(&swrContext);
-                }
+                swr_free(&swrContext);
 
                 break;
 
-
-            } else {
-                av_packet_free(&avPacket);
-                av_freep(&avPacket);
-                avPacket = NULL;
-
+           } else{
+                isFinishReceive= true;
+                if(avPacket){
+                    av_packet_free(&avPacket);
+                    av_freep(&avPacket);
+                    avPacket = NULL;
+                }
                 av_frame_free(&avFrame);
                 av_freep(&avFrame);
                 avFrame = NULL;
-                continue;
             }
 
 
         } else {
-            if (IS_DEBUG) {
-                ALOGD("没有数据可以采样");
-
-            }
-            if (isReadFinish) {
-                if (callJava != NULL) {
+            callJava->onLoad(ChildThread, true);
+            if(isReadFinish){
+                if(callJava!=NULL){
+                    callJava->onLoad(ChildThread, false);
                     callJava->onComplete(ChildThread);
                 }
+
+             }
+              usleep(1000*100);
             }
 
-        }
+
+
     }
     return data_size;
 }
@@ -151,8 +187,8 @@ static void bufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *data) {
     if (buffsize > 0) {
         double show_time = buffsize / (double) (OUT_SAMPLE_RATE);
 
-        audio->current = audio->current + show_time;
-        if (audio->current - audio->pre_time > 0.5) {
+        //audio->current = audio->current + show_time;
+        if (audio->current - audio->pre_time > 0.1) {
             audio->callJava->onProgress(ChildThread, (int) audio->duration, (int) audio->current);
             audio->pre_time = audio->current;
         }
@@ -167,7 +203,8 @@ static void bufferCallBack(SLAndroidSimpleBufferQueueItf bf, void *data) {
         }
 
         (*(audio->slBufferQueueItf))->Enqueue(audio->slBufferQueueItf, audio->sampletype,
-                                              buffsize * 2 * 2);
+                buffsize * 2 * 2);
+
     }
 
 
@@ -516,6 +553,8 @@ Audio::~Audio() {
     pthread_mutex_destroy(&sl_mutex);
 
 }
+
+
 
 
 

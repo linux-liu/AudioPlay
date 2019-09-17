@@ -1,9 +1,12 @@
 
 {
-	"buildFiles" : [ "D:/myworkspace/AudioPlay/audiolib/CMakeLists.txt" ],
+	"buildFiles" : 
+	[
+		"/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/CMakeLists.txt"
+	],
 	"cleanCommands" : 
 	[
-		"D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\myworkspace\\AudioPlay\\audiolib\\.externalNativeBuild\\cmake\\release\\x86_64 --target clean"
+		"/home/liuxin/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64 --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -13,196 +16,196 @@
 			"abi" : "x86_64",
 			"artifactName" : "avcodec",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavcodec.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavcodec.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avdevice-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "avdevice",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavdevice.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavdevice.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avfilter-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "avfilter",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavfilter.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavfilter.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avformat-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "avformat",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavformat.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavformat.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avutil-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "avutil",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavutil.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libavutil.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"native-lib-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "native-lib",
-			"buildCommand" : "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\myworkspace\\AudioPlay\\audiolib\\.externalNativeBuild\\cmake\\release\\x86_64 --target native-lib",
+			"buildCommand" : "/home/liuxin/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64 --target native-lib",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/CallJava.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/CallJava.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/LXFFmpeg.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/LXFFmpeg.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/Audio.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/Audio.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/AvPacketQuene.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/AvPacketQuene.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/PlayStatus.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/PlayStatus.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/AAFilter.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/AAFilter.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/FIRFilter.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/FIRFilter.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/BPMDetect.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/BPMDetect.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/PeakFinder.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/PeakFinder.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/cpu_detect_x86.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/cpu_detect_x86.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/FIFOSampleBuffer.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/FIFOSampleBuffer.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateCubic.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateCubic.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateLinear.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateLinear.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateShannon.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateShannon.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/mmx_optimized.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/mmx_optimized.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/RateTransposer.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/RateTransposer.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/SoundTouch.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/SoundTouch.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/sse_optimized.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/sse_optimized.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				},
 				
 				{
-					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86_64\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/TDStretch.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
+					"flags" : "  --target=x86_64-none-linux-android21 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/TDStretch.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/x86_64"
 				}
 			],
-			"output" : "D:/myworkspace/AudioPlay/audiolib/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"swresample-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "swresample",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libswresample.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libswresample.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"swscale-Release-x86_64" : 
 		{
 			"abi" : "x86_64",
 			"artifactName" : "swscale",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/x86_64/libswscale.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/x86_64/libswscale.so",
+			"toolchain" : "17558887185903181385"
 		}
 	},
 	"toolchains" : 
 	{
-		"1534523253" : 
+		"17558887185903181385" : 
 		{
-			"cCompilerExecutable" : "D:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
-			"cppCompilerExecutable" : "D:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+			"cCompilerExecutable" : "/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
 		}
 	}
 }

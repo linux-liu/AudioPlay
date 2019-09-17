@@ -1,9 +1,12 @@
 
 {
-	"buildFiles" : [ "D:/myworkspace/AudioPlay/audiolib/CMakeLists.txt" ],
+	"buildFiles" : 
+	[
+		"/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/CMakeLists.txt"
+	],
 	"cleanCommands" : 
 	[
-		"D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\myworkspace\\AudioPlay\\audiolib\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target clean"
+		"/home/liuxin/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -13,196 +16,196 @@
 			"abi" : "armeabi-v7a",
 			"artifactName" : "avcodec",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavcodec.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavcodec.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avdevice-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "avdevice",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavdevice.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavdevice.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avfilter-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "avfilter",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavfilter.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavfilter.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avformat-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "avformat",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavformat.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavformat.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"avutil-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "avutil",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavutil.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libavutil.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"native-lib-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "native-lib",
-			"buildCommand" : "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build D:\\myworkspace\\AudioPlay\\audiolib\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target native-lib",
+			"buildCommand" : "/home/liuxin/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a --target native-lib",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/CallJava.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/CallJava.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/LXFFmpeg.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/LXFFmpeg.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/Audio.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/Audio.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/AvPacketQuene.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/AvPacketQuene.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/PlayStatus.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/PlayStatus.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/AAFilter.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/AAFilter.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/FIRFilter.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/FIRFilter.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/BPMDetect.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/BPMDetect.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/PeakFinder.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/PeakFinder.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/cpu_detect_x86.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/cpu_detect_x86.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/FIFOSampleBuffer.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/FIFOSampleBuffer.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateCubic.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateCubic.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateLinear.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateLinear.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateShannon.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/InterpolateShannon.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/mmx_optimized.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/mmx_optimized.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/RateTransposer.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/RateTransposer.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/SoundTouch.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/SoundTouch.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/sse_optimized.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/sse_optimized.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -I..\\..\\..\\..\\src\\main\\jniLibs\\includes -I..\\..\\..\\..\\src\\main\\jniLibs\\includes\\soundtouch -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi-v7a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "D:/myworkspace/AudioPlay/audiolib/src/main/cpp/soundtouch/TDStretch.cpp",
-					"workingDirectory" : "D:/myworkspace/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/jniLibs/includes -I../../../../src/main/jniLibs/includes/soundtouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -Oz -DNDEBUG  -fPIC    -c ",
+					"src" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/cpp/soundtouch/TDStretch.cpp",
+					"workingDirectory" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/.externalNativeBuild/cmake/release/armeabi-v7a"
 				}
 			],
-			"output" : "D:/myworkspace/AudioPlay/audiolib/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"swresample-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "swresample",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libswresample.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libswresample.so",
+			"toolchain" : "17558887185903181385"
 		},
 		"swscale-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "swscale",
 			"buildType" : "release",
-			"output" : "D:/myworkspace/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libswscale.so",
-			"toolchain" : "1534523253"
+			"output" : "/home/liuxin/AndroidStudioProjects/AudioPlay/audiolib/src/main/jniLibs/armeabi-v7a/libswscale.so",
+			"toolchain" : "17558887185903181385"
 		}
 	},
 	"toolchains" : 
 	{
-		"1534523253" : 
+		"17558887185903181385" : 
 		{
-			"cCompilerExecutable" : "D:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
-			"cppCompilerExecutable" : "D:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+			"cCompilerExecutable" : "/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/home/liuxin/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
 		}
 	}
 }

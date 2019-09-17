@@ -28,6 +28,8 @@ public:
 
     jmethodID  jdbmd=NULL;
 
+    jmethodID  jloadmd=NULL;
+
 
 
 
@@ -45,9 +47,11 @@ public:
 
     void onPlayStatus(int type,int status);
 
-    void onCallSwitch(int type);
+
 
     void onDb(int type,int db);
+
+    void onLoad(int type, bool isload);
 
     ~CallJava();
 

@@ -48,6 +48,7 @@ static int interrupt_call_back(void *data) {
 void LXFFmpeg::realPrepare() {
 
     pthread_mutex_lock(&pthreadMutex);
+    callJava->onLoad(ChildThread, true);
     callJava->onPlayStatus(ChildThread, 0);
     av_register_all();
     avformat_network_init();
@@ -179,10 +180,14 @@ void LXFFmpeg::realStart() {
     while (playStatus != NULL && !playStatus->isExit && avPacketQuene != NULL) {
 
         if (playStatus->isSeek) {
+            usleep(1000*100);
             continue;
         }
+
         //最多缓存100个
-        if (avPacketQuene->getSize() > 100) {
+        if (avPacketQuene->getSize() > 100||audio->isReadFinish) {
+
+            usleep(1000*100);
             continue;
         }
 
@@ -211,14 +216,16 @@ void LXFFmpeg::realStart() {
                 av_freep(&avPacket);
                 avPacket = NULL;
             }
-            ALOGE("读取完成！");
-            break;
+            if(IS_DEBUG){
+                ALOGE("读取完成！%d",avPacketQuene->getSize());
+            }
+            audio->isReadFinish=true;
+
+            usleep(1000*100);
+            continue;
+
         }
 
-    }
-
-    if (audio != NULL) {
-        audio->isReadFinish = true;
     }
 
     pthread_mutex_unlock(&pthreadMutex);
@@ -320,24 +327,28 @@ void LXFFmpeg::seek(int sec) {
             return;
         }
 
+
         pthread_mutex_lock(&pthreadSeek);
         playStatus->isSeek = true;
         avPacketQuene->clearQuene();
         audio->current = 0;
         audio->pre_time = 0;
+        audio->isFinishReceive=true;
 
-        int64_t realSeek = sec * AV_TIME_BASE;
-        if (IS_DEBUG) {
-            ALOGD("sec=>%d realSeek=>%lld", sec, realSeek);
-        }
-        int ret = avformat_seek_file(formatContext, -1, INT64_MIN, realSeek, INT64_MAX, 0);
+
+        auto realSeek = static_cast<int64_t>(sec /
+                                                av_q2d(formatContext->streams[audio->audioStreamIndex]->time_base));
+
+        audio->isReadFinish= false;
+        avcodec_flush_buffers(codecContext);
+        int ret = av_seek_frame(formatContext, audio->audioStreamIndex, realSeek, 0);
         if (IS_DEBUG) {
             ALOGD("seek ret==%d", ret);
         }
 
-        playStatus->isSeek = false;
 
         pthread_mutex_unlock(&pthreadSeek);
+        playStatus->isSeek = false;
     }
 
 
